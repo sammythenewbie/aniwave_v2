@@ -442,7 +442,7 @@ html,body {
   }
 
   .toggle-button {
-    display: none;
+    display: block;
     margin: 10px auto;
     background-color: #007BFF;
     color: white;
