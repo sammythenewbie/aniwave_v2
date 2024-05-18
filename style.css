@@ -266,144 +266,144 @@ section {
   background-color: #fff;
   }
 
-  .search input{
-    height: 30px;
-    border: 0;
+.search input{
+  height: 30px;
+  border: 0;
+}
+
+.search input:focus{
+  box-shadow: none;
+}
+
+.search .fa-search{
+  padding: 15px;
+  background-color: #fff;
+  color: black;
+  padding-right: 0;
+}
+.mg-bt {
+    margin-bottom: 20px; /* Adjust the value as needed */
   }
 
-  .search input:focus{
-    box-shadow: none;
-  }
-
-  .search .fa-search{
-    padding: 15px;
-    background-color: #fff;
-    color: black;
-    padding-right: 0;
-  }
-  .mg-bt {
-      margin-bottom: 20px; /* Adjust the value as needed */
-    }
-
-  .search button{
+.search button{
 /*      position: absolute; */
 /*      top: 50%;
-    right: 5px;
-    translate: 0% -50%; */
-    height: 50px;
-    width: 110px;
-    background: blue;
-    border-radius: 0;
-    margin: 0;
-    padding: 0;
-  }
+  right: 5px;
+  translate: 0% -50%; */
+  height: 50px;
+  width: 110px;
+  background: blue;
+  border-radius: 0;
+  margin: 0;
+  padding: 0;
+}
 
-  @media only screen and (max-width: 770px) {
-    .col-12 {
-      display: flex;
-      width: 100%;
-      align-self: center;
-      align-items: center;
-      justify-content: center;
-    }
-    
-    .col-12:first-child {
-      margin-bottom: 1rem;
-    }
-  } 
-
-
-  .fa-smog {
-      color: #FF6914;
-    }
-
-  .row {
-      padding-bottom: 1rem;
-    }
-  
-  .card, .row a {
-      border-radius: 10px;
-      max-width: inherit;
-      overflow: hidden;
-      object-fit: cover;
-      height: 100%;
-  }
-
-  .card {
-    transition: box-shadow .3s;
-    border-radius:10px;
-    border: 1px solid #ccc;
-    background: #fff;
-    float: left;
-  }
-
-  .card > img {
-    object-fit: cover; 
-    height: 200px; 
-    width: 100%;
-  }
-
-  .card:hover {
-    box-shadow: 0 0 25px rgba(33,33,33,.2); 
-  }
-
-  .card #thumbnail {
-      height: 1250%;
-      object-fit: cover;
-  }
-
-  .card .uploader {
-      padding: 0;
-  }
-
-  .card .uploader img {
-      object-fit: contain; 
-      margin: 0px;
-      width: 40px;
-      height: 40px;
-      border: 1px solid black;
-      background-color: #fff;
-      border-radius: 5px;
-  }
-
-  .episode-counter {
-    padding: 12px;
+@media only screen and (max-width: 770px) {
+  .col-12 {
     display: flex;
-    flex-wrap: wrap;
-    gap: 0.5rem;
+    width: 100%;
+    align-self: center;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .col-12:first-child {
+    margin-bottom: 1rem;
+  }
+} 
+
+
+.fa-smog {
+    color: #FF6914;
   }
 
-  .episode-counter .btn {
-    padding: 15px 20px;
-    border: 2 px soild black;
+.row {
+    padding-bottom: 1rem;
   }
 
-  .card .info-wrapper {
-      display: flex;
-      flex-direction: row;
-      padding: 10px;
-      gap: 1rem;
-  }
+.card, .row a {
+    border-radius: 10px;
+    max-width: inherit;
+    overflow: hidden;
+    object-fit: cover;
+    height: 100%;
+}
 
-  .card .info-wrapper .thumbnail-info {
-      display: flex;
-      flex-direction: column;
-  }
+.card {
+  transition: box-shadow .3s;
+  border-radius:10px;
+  border: 1px solid #ccc;
+  background: #fff;
+  float: left;
+}
 
-  .title {
-      margin-bottom: 5px;
-  }
+.card > img {
+  object-fit: cover; 
+  height: 200px; 
+  width: 100%;
+}
 
-  .episode-count, .year {
-      font-size: 1rem;
-      color: gray;
-      margin: 0;
-      text-align: center;
-  }
+.card:hover {
+  box-shadow: 0 0 25px rgba(33,33,33,.2); 
+}
 
-  .card-text {
+.card #thumbnail {
+    height: 1250%;
+    object-fit: cover;
+}
+
+.card .uploader {
+    padding: 0;
+}
+
+.card .uploader img {
+    object-fit: contain; 
+    margin: 0px;
+    width: 40px;
+    height: 40px;
+    border: 1px solid black;
+    background-color: #fff;
+    border-radius: 5px;
+}
+
+.episode-counter {
+  padding: 12px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.episode-counter .btn {
+  padding: 15px 20px;
+  border: 2 px soild black;
+}
+
+.card .info-wrapper {
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
+    gap: 1rem;
+}
+
+.card .info-wrapper .thumbnail-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.title {
+    margin-bottom: 5px;
+}
+
+.episode-count, .year {
+    font-size: 1rem;
+    color: gray;
     margin: 0;
-  }
+    text-align: center;
+}
+
+.card-text {
+  margin: 0;
+}
     
 .card-title {
   display: -webkit-box;
