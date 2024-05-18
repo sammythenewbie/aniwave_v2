@@ -405,69 +405,56 @@ html,body {
   overflow: hidden;
 }
 
-@media only screen and (max-width: 600px) {
-  .clamped-text {
-      display: -webkit-box;
-      -webkit-box-orient: vertical;
-      overflow: hidden;
-      -webkit-line-clamp: 3;
-      max-height: calc(1.2em * 3); /* Adjust 1.2em to match the line height */
+  @media only screen and (max-width: 600px) {
+    .clamped-text {
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        -webkit-line-clamp: 3;
+        max-height: calc(1.2em * 3); /* Adjust 1.2em to match the line height */
+    }
+
+    .text.expanded {
+        max-height: none;
+    }
+
+    .toggle-button {
+        display: block;
+    }
   }
 
-  .text.expanded {
-      max-height: none;
+  @media only screen and (min-width: 601px) and (max-width: 992px) {
+    .clamped-text {
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        -webkit-line-clamp: 3;
+        max-height: calc(1.2em * 3); 
+    }
+
+    .text.expanded {
+        max-height: none;
+    }
+
+    .toggle-button {
+        display: block;
+    }
   }
 
   .toggle-button {
-      display: block;
-  }
-}
-
-@media only screen and (min-width: 601px) and (max-width: 992px) {
-  .clamped-text {
-      display: -webkit-box;
-      -webkit-box-orient: vertical;
-      overflow: hidden;
-      -webkit-line-clamp: 3;
-      max-height: calc(1.2em * 3); 
+    display: none;
+    margin: 10px auto;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
   }
 
-  .text.expanded {
-      max-height: none;
+  .toggle-button:focus {
+    outline: none;
   }
-
-  .toggle-button {
-      display: block;
-  }
-}
-
-.toggle-button {
-  display: none;
-  margin: 10px auto;
-  background-color: #007BFF;
-  color: white;
-  border: none;
-  padding: 10px 20px;
-  cursor: pointer;
-  border-radius: 5px;
-}
-
-.toggle-button:focus {
-  outline: none;
-}
-
-.clamped-text {
-  display: block;
-  max-height: none;
-}
-
-.toggle-button {
-  display: none;
-}
-
-.toggle-button:focus {
-  outline: none;
-}
 
     .card-body {
       margin-top: 5px;
