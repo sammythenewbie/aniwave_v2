@@ -469,6 +469,10 @@ section {
       display: none;
       visibility: hidden;
     }
+
+    .related {
+      padding-left: 10px;
+    }
   }
 
   .toggle-button {
@@ -542,10 +546,6 @@ section {
     .wrapper-video-player {
     padding: 0;
   } 
-
-  .related {
-    padding-left: 10px;
-  }
 
   .row > .col-3 {
     margin-inline: auto;
