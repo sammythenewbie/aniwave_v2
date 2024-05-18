@@ -524,7 +524,7 @@ section {
 
     .video-container video {
       width: 100%;
-      overflow: auto;
+      border: 2px solid black;
     }
 
     .wrapper-video-player {
