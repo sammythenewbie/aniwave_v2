@@ -480,7 +480,7 @@ section {
     }
 
     .container-fluid {
-      margin-inline: 1rem;
+      padding-inline: 1rem;
     }
   }
 
