@@ -412,7 +412,7 @@ section {
   overflow: hidden;
 }
 
-  @media only screen and (max-width: 600px) {
+@media only screen and (max-width: 600px) {
     .clamped-text {
         display: -webkit-box;
         -webkit-box-orient: vertical;
@@ -428,6 +428,9 @@ section {
     .toggle-button {
         display: block;
         visibility: visible;
+    }
+    .about {
+      padding: 0 12px;
     }
   }
 
@@ -448,6 +451,9 @@ section {
     .toggle-button {
         display: block;
         visibility: visible;
+    }
+    .about {
+      padding: 0 12px;
     }
   }
 
