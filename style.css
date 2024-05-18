@@ -578,6 +578,7 @@ html,body {
   #save, #like {
     display: inline-flex;
     gap: 0.5rem;
+    color: gray;
     align-items: center;
   }
 
