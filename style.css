@@ -9,7 +9,7 @@ html,body {
     --logo-color-blue: #0d6efd;
     --logo-color-orange: #FF6914;
   }
-  @media (prefers-color-scheme: dark) {
+  @media (color-scheme: dark) {
     body {
       background-color: #222;
       color: #fff;
