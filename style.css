@@ -528,6 +528,7 @@ section {
     .wrapper-video-player {
     padding: 0;
     width: 100%;
+    object-fit: cover;
   } 
 
   .related {
