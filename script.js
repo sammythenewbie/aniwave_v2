@@ -26,14 +26,14 @@ fetch('data.json')
   .catch(error => console.error('Error fetching data:', error));
 
 //Loader
-window.addEventListener("load", function () {
+/* window.addEventListener("load", function () {
   setTimeout(function() {
     // Get preloader element
     var preloader = document.querySelector(".preloader, .preloader-video");
     // Hide preloader and show content
     preloader.style.display = "none";
   }, 3000); // 5000 milliseconds = 5 seconds
-});
+}); */
 
 document.addEventListener('DOMContentLoaded', function() {
   const text = document.getElementById('description');
