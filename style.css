@@ -405,45 +405,39 @@ html,body {
   overflow: hidden;
 }
 
-  @media only screen and (max-width: 600px) {
-    .clamped-text {
-        display: -webkit-box;
-        -webkit-box-orient: vertical;
-        overflow: hidden;
-        -webkit-line-clamp: 3;
-        max-height: calc(1.2em * 3); /* Adjust 1.2em to match the line height */
-    }
-
-    .text.expanded {
-        max-height: none;
-    }
-
-    .toggle-button {
-        display: block;
-    }
+@media only screen and (min-width: 601px) and (max-width: 992px) {
+  .clamped-text {
+      -webkit-line-clamp: 3;
+      max-height: calc(1.2em * 3); /* Adjust 1.2em to match the line height and 3 to match the line clamp */
   }
 
-  @media only screen and (min-width: 601px) and (max-width: 992px) {
-    .clamped-text {
-        display: -webkit-box;
-        -webkit-box-orient: vertical;
-        overflow: hidden;
-        -webkit-line-clamp: 3;
-        max-height: calc(1.2em * 3); 
-        transition: all 0.5s ease-in-out;
-    }
-
-    .text.expanded {
-        max-height: none;
-    }
-
-    .toggle-button {
-        display: block;
-    }
+  .clamped-text.expanded {
+      -webkit-line-clamp: unset;
+      max-height: 1000px; /* A sufficiently large value to show the full text */
   }
 
   .toggle-button {
-    display: block;
+      display: block;
+  }
+}
+
+.toggle-button {
+  display: none; /* Default state is hidden */
+  margin: 10px auto;
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.toggle-button:focus {
+  outline: none;
+}
+
+  .toggle-button {
+    display: none;
     margin: 10px auto;
     background-color: #007BFF;
     color: white;
