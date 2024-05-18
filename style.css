@@ -445,8 +445,7 @@ html,body {
   }
 
   .toggle-button {
-    display: block;
-    visibility: hidden;
+    display: hidden;
     margin: 10px auto;
     background-color: #007BFF;
     color: white;
