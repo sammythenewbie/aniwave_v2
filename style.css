@@ -448,7 +448,7 @@ html,body {
     display: block !important;
     margin: 10px auto;
     background-color: #007BFF;
-    align-self: start;
+    text-align: left;
     color: white;
     border: none;
     padding: 10px 20px;
