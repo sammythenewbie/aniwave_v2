@@ -446,9 +446,8 @@ html,body {
 
   .toggle-button {
     display: block !important;
-    margin: 10px auto;
+    margin: 10px 0;
     background-color: #007BFF;
-    text-align: left;
     color: white;
     border: none;
     padding: 10px 20px;
