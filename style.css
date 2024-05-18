@@ -406,13 +406,13 @@ html,body {
 }
 
 @media only screen and (max-width: 600px) {
- /*  #description {
+  .clamped-text  {
     display: -webkit-box;
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
     overflow: hidden;
-  } */
-
+  }
+  
   .toggle-button {
     display: block;
     margin: 10px auto;
@@ -445,27 +445,13 @@ html,body {
   }
 }
 
-.clamped-text  {
-  display: -webkit-box;
-  -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-}
-
-.expanded-text {
+.clamped-text {
   display: block;
   max-height: none;
 }
 
 .toggle-button {
-  display: block;
-  margin: 10px auto;
-  background-color: #007BFF;
-  color: white;
-  border: none;
-  padding: 10px 20px;
-  cursor: pointer;
-  border-radius: 5px;
+  display: none;
 }
 
 .toggle-button:focus {
