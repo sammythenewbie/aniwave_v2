@@ -61,8 +61,8 @@ html,body {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: #000; /* Background color of preloader */
-  z-index: 9; /* Ensure preloader is on top */
+  background-color: #000; 
+  z-index: 9; 
   display: flex;
   justify-content: center;
   align-items: center;
@@ -74,12 +74,12 @@ html,body {
 }
 
 .loader {
-  border: 8px solid #f3f3f3; /* Light border */
-  border-top: 8px solid #3498db; /* Blue border (change color as needed) */
+  border: 8px solid #f3f3f3; 
+  border-top: 8px solid #3498db; 
   border-radius: 50%;
   width: 80px;
   height: 80px;
-  animation: spin 1.5s linear infinite; /* Rotate animation */
+  animation: spin 1.5s linear infinite; 
 }
 
 @keyframes spin {
@@ -519,6 +519,7 @@ section {
 
     .video-container {
       width: 100%;
+      object-fit: cover;
     }
     .video-container video {
       width: 100%;
