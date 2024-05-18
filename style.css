@@ -412,9 +412,6 @@ section {
   overflow: hidden;
 }
 
-.container-fluid {
-  max-width: 1024px;
-}
 
 @media only screen and (max-width: 600px) {
     .clamped-text {
@@ -480,6 +477,10 @@ section {
 
     .related {
       padding-left: 10px;
+    }
+
+    .container-fluid {
+      margin-inline: 1rem;
     }
   }
 
