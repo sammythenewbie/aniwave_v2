@@ -411,7 +411,7 @@ html,body {
         -webkit-box-orient: vertical;
         overflow: hidden;
         -webkit-line-clamp: 3;
-        max-height: calc(1.2em * 2); /* Adjust 1.2em to match the line height */
+        max-height: calc(1.2em * 2.8); /* Adjust 1.2em to match the line height */
     }
 
     .text.expanded {
@@ -430,7 +430,7 @@ html,body {
         -webkit-box-orient: vertical;
         overflow: hidden;
         -webkit-line-clamp: 3;
-        max-height: calc(1.2em * 2); 
+        max-height: calc(1.2em * 2.8); 
         transition: all 0.5s ease-in-out;
     }
 
