@@ -36,7 +36,7 @@ window.addEventListener("load", function () {
 });
 
 document.addEventListener('DOMContentLoaded', function() {
-  const text = document.getElementById('text');
+  const text = document.getElementById('description');
   const button = document.getElementById('toggleButton');
 
   button.addEventListener('click', function() {
