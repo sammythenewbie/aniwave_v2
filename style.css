@@ -406,43 +406,54 @@ html,body {
 }
 
 @media only screen and (max-width: 600px) {
-  .clamped-text  {
-    display: -webkit-box;
-    -webkit-line-clamp: 2;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
+  .clamped-text {
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      -webkit-line-clamp: 3;
+      max-height: calc(1.2em * 3); /* Adjust 1.2em to match the line height */
   }
-  
+
+  .text.expanded {
+      max-height: none;
+  }
+
   .toggle-button {
-    display: block;
-    margin: 10px auto;
-    background-color: #007BFF;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-    border-radius: 5px;
+      display: block;
   }
 }
 
 @media only screen and (min-width: 601px) and (max-width: 992px) {
-  .clamped-text  {
-    display: -webkit-box;
-    -webkit-line-clamp: 2;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
+  .clamped-text {
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      -webkit-line-clamp: 3;
+      max-height: calc(1.2em * 3); 
+  }
+
+  .text.expanded {
+      max-height: none;
   }
 
   .toggle-button {
-    display: block;
-    margin: 10px auto;
-    background-color: #007BFF;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-    border-radius: 5px;
+      display: block;
   }
+}
+
+.toggle-button {
+  display: none;
+  margin: 10px auto;
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.toggle-button:focus {
+  outline: none;
 }
 
 .clamped-text {
