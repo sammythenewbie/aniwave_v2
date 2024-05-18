@@ -34,3 +34,18 @@ window.addEventListener("load", function () {
     preloader.style.display = "none";
   }, 3000); // 5000 milliseconds = 5 seconds
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+  const text = document.getElementById('text');
+  const button = document.getElementById('toggleButton');
+
+  button.addEventListener('click', function() {
+      if (text.classList.contains('clamped-text')) {
+          text.classList.remove('clamped-text');
+          button.textContent = 'Show less';
+      } else {
+          text.classList.add('clamped-text');
+          button.textContent = 'Read more';
+      }
+  });
+});

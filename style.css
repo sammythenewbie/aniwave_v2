@@ -412,6 +412,17 @@ html,body {
     -webkit-box-orient: vertical;
     overflow: hidden;
   }
+
+  .toggle-button {
+    display: block;
+    margin: 10px auto;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+  }
 }
 
 @media only screen and (min-width: 601px) and (max-width: 992px) {
@@ -421,6 +432,25 @@ html,body {
     -webkit-box-orient: vertical;
     overflow: hidden;
   }
+
+  .toggle-button {
+    display: block;
+    margin: 10px auto;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+}
+
+.toggle-button {
+  display: none;
+}
+
+.toggle-button:focus {
+  outline: none;
 }
 
     .card-body {
