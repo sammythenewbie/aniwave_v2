@@ -520,6 +520,7 @@ section {
     .video-container {
       width: 100%;
       object-fit: cover;
+      background-color: #6f6c6c;
     }
 
     .video-container video {
