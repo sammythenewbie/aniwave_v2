@@ -519,6 +519,7 @@ section {
 
     .video-container {
       width: 100%;
+      object-fit: cover;
     }
 
     .video-container video {
@@ -528,7 +529,6 @@ section {
     .wrapper-video-player {
     padding: 0;
     width: 100%;
-    object-fit: cover;
   } 
 
   .related {
