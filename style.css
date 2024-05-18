@@ -446,7 +446,14 @@ html,body {
 }
 
 .toggle-button {
-  display: none;
+  display: block;
+  margin: 10px auto;
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
 }
 
 .toggle-button:focus {
