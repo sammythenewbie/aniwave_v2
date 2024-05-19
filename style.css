@@ -263,12 +263,14 @@ section {
   border: 2px solid #d6d4d4;
   border-radius: 10px;
   overflow: hidden;
-  background-color: #fff;
+  background-color: gray;
   }
 
 .search input{
   height: 30px;
   border: 0;
+  background-color: transparent;
+  color: #fff;
 }
 
 .search input:focus{
@@ -277,8 +279,8 @@ section {
 
 .search .fa-search{
   padding: 15px;
-  background-color: #fff;
-  color: black;
+  background-color: transparent;
+  color: rgb(255, 255, 255);
   padding-right: 0;
 }
 .mg-bt {
