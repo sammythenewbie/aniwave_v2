@@ -1,5 +1,6 @@
 [
     {
+      "id": 1,
       "title": "Kimitsu No Yaiba",
       "episodeCount": "216 Episodes",
       "year": "2024",
@@ -7,6 +8,7 @@
       "link": "./player.html"
     },
     {
+      "id": 2,
       "title": "Bleach: Thousand-Year Blood War",
       "episodeCount": "100 Episodes",
       "year": "2023",
@@ -14,6 +16,7 @@
       "link": "https://example.com/anime2"
     },
     {
+      "id": 3,
       "title": "Fullmetal Alchemist: Brotherhood",
       "episodeCount": "216 Episodes",
       "year": "2024",
@@ -21,6 +24,7 @@
       "link": "https://example.com/anime1"
     },
     {
+      "id": 4,
       "title": "Attack on Titan 2",
       "episodeCount": "100 Episodes",
       "year": "2023",
@@ -28,6 +32,7 @@
       "link": "https://example.com/anime2"
     },
     {
+      "id": 5,
       "title": "Death Note",
       "episodeCount": "216 Episodes",
       "year": "2024",
@@ -35,6 +40,7 @@
       "link": "https://example.com/anime1"
     },
     {
+      "id": 6,
       "title": "Naruto Shippuden",
       "episodeCount": "100 Episodes",
       "year": "2023",
@@ -42,6 +48,7 @@
       "link": "https://example.com/anime2"
     },
     {
+      "id": 7,
       "title": "One Piece",
       "episodeCount": "216 Episodes",
       "year": "2024",
@@ -49,6 +56,7 @@
       "link": "https://example.com/anime1"
     },
     {
+      "id": 8,
       "title": "My Hero Academia",
       "episodeCount": "100 Episodes",
       "year": "2023",

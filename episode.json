@@ -1,0 +1,87 @@
+document.addEventListener('DOMContentLoaded', function() {
+    const videoList = document.getElementById('videoList');
+    const videoPlayer = document.getElementById('videoPlayer');
+
+    // Fetch data from JSON file
+    fetch('videos.json')
+        .then(response => response.json())
+        .then(data => {
+            // Create video links/cards dynamically
+            data.forEach(video => {
+                const listItem = document.createElement('li');
+                const link = document.createElement('a');
+                link.href = '#';
+                link.classList.add('video-link');
+                link.dataset.id = video.id;
+                link.textContent = video.title;
+                listItem.appendChild(link);
+                videoList.appendChild(listItem);
+            });
+
+            // Event listener for video links
+            videoList.addEventListener('click', function(event) {
+                event.preventDefault();
+                const target = event.target;
+                if (target.classList.contains('video-link')) {
+                    const videoId = target.dataset.id;
+                    const selectedVideo = data.find(video => video.id == videoId);
+                    if (selectedVideo) {
+                        displayVideo(selectedVideo);
+                    }
+                }
+            });
+        })
+        .catch(error => console.error('Error fetching data:', error));
+
+    function displayVideo(video) {
+        // Clear previous video player content
+        videoPlayer.innerHTML = '';
+
+        // Create video player elements
+        const videoTitle = document.createElement('h2');
+        videoTitle.textContent = video.title;
+        const videoDescription = document.createElement('p');
+        videoDescription.textContent = video.description;
+        const videoElement = document.createElement('video');
+        videoElement.src = video.videoSrc;
+        videoElement.controls = true;
+
+        // Append elements to video player container
+        videoPlayer.appendChild(videoTitle);
+        videoPlayer.appendChild(videoDescription);
+        videoPlayer.appendChild(videoElement);
+    }
+});
+
+
+<ul id="videoList">
+    <li><a href="#" class="video-link" data-id="1">Video Title 1</a></li>
+    <li><a href="#" class="video-link" data-id="2">Video Title 2</a></li>
+    <li><a href="#" class="video-link" data-id="3">Video Title 3</a></li>
+</ul>
+
+<div id="videoPlayer">
+    <!-- Video player container -->
+</div>
+
+
+[
+    {
+        "id": 1,
+        "title": "Video Title 1",
+        "description": "Description for Video 1",
+        "videoSrc": "video1.mp4"
+    },
+    {
+        "id": 2,
+        "title": "Video Title 2",
+        "description": "Description for Video 2",
+        "videoSrc": "video2.mp4"
+    },
+    {
+        "id": 3,
+        "title": "Video Title 3",
+        "description": "Description for Video 3",
+        "videoSrc": "video3.mp4"
+    }
+]
