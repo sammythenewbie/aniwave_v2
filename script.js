@@ -28,7 +28,9 @@ fetch('data.json')
 //Loader
 window.addEventListener("load", function () {
     var preloader = document.querySelector(".preloader, .preloader-video");
-});
+    preloader.style.display = "none";
+  }
+);
 
 document.addEventListener('DOMContentLoaded', function() {
   const text = document.getElementById('description');
