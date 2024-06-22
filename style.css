@@ -614,6 +614,17 @@ section {
     gap:10px;
   }
 
+  input[type=text] {
+    padding: 10px;
+    background: white;
+    border-radius: 1opx;
+  }
+
+  .write > i {
+    padding: 10px;
+    border-radius: 5px;
+  }
+
   .share {
     padding: 12px 10px;
     border-radius: 10px;
