@@ -598,6 +598,10 @@ section {
     border-radius: 50%;
   }
 
+  .profile-wrap {
+    display: flex;
+  }
+
   .action-wrap {
     display: flex;
     gap:10px;
