@@ -600,7 +600,7 @@ section {
 
   .profile-wrap {
     display: flex;
-    padding: 0 12px;
+    gap: 10px;
   }
 
   .action-wrap {
@@ -644,6 +644,7 @@ section {
   .user-com {
     display: flex;
     flex-direction: column;
+    padding: 0 12px;
   }
 
   #author {
