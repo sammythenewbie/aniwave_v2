@@ -633,8 +633,8 @@ section {
   }
 
   .btn:hover {
-    background: rgb(255, 255, 255,0.3);
-    color: var(--logo-color-blue);
+    background: var(--logo-color-blue);
+    color: var(--logo-color-orange);
   }
 
   #author {
