@@ -619,7 +619,9 @@ section {
     width: 100%;
     background: white;
     border-radius: 10px;
+    width: 100%;
     border: 0;
+    color: #000;
     outline: 0;
   }
 
