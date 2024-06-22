@@ -632,8 +632,8 @@ section {
   }
 
   .btn:hover, #save:hover, #like:hover, #reply:hover, #like-comment:hover {
-    background: var(--logo-color-blue);
-    color: white;
+    background: var(--logo-color-orange);
+    color: black;
   }
 
   #author {
