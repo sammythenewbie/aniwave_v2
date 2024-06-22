@@ -562,6 +562,10 @@ section {
     margin-inline: auto;
   }
 
+  .row {
+    display: flex;
+  }
+
   .div-sub-title {
     font-size: 1.2rem;
     padding: 0;
