@@ -614,7 +614,7 @@ section {
     gap:10px;
   }
 
-  input[type=text] {
+  .write > input[type=text] {
     padding: 10px;
     background: white;
     border-radius: 10px;
