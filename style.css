@@ -615,7 +615,6 @@ section {
   }
 
   .write > input[type=text] {
-    padding: 10px;
     width: 100%;
     background: white;
     border-radius: 10px;
@@ -628,6 +627,8 @@ section {
     width: 100%;
     background: white;
     border-radius: 10px;
+    display: flex;
+    padding: 10px;
   }
 
   .write > i {
