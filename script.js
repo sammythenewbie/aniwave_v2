@@ -4,7 +4,7 @@ fetch('data.json')
     const wrapper = document.getElementById('row');
     data.forEach(item => {
       const card = document.createElement('div');
-      card.classList.add("col col-sm-6 col-md-6 col-lg-12");
+      card.classList.add("col col-md-6 col-lg-12");
       card.innerHTML = `
       <a href="${item.link}"> 
         <div class="card h-100">
