@@ -636,6 +636,11 @@ section {
     color: black;
   }
 
+  .user-com {
+    display: flex;
+    flex-direction: column;
+  }
+
   #author {
     width: 100px;
   }
