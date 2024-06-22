@@ -596,6 +596,7 @@ section {
     padding: 12px 0;
     display: flex;
     gap: 1rem;
+    background: rgb(255, 255, 255,0.2)
   }
 
   #like i, #save i {
