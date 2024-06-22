@@ -598,6 +598,11 @@ section {
     border-radius: 50%;
   }
 
+  .action-wrap {
+    display: flex;
+    gap:10px;
+  }
+
   .share {
     padding: 12px 10px;
     border-radius: 10px;
@@ -618,7 +623,7 @@ section {
     font-size: 1.2rem;
   }
 
-  #save, #like {
+  #save, #like, #reply, #like-comment {
     display: inline-flex;
     gap: 0.5rem;
     color: gray;
