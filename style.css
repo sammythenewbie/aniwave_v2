@@ -302,7 +302,6 @@ section {
 
 @media only screen and (max-width: 770px) {
   .col-12 {
-    display: flex;
     width: 100%;
     align-self: center;
     align-items: center;
