@@ -600,7 +600,7 @@ section {
 
   .profile-wrap {
     display: flex;
-    gap: 10px;
+    gap: 5px;
   }
 
   .username {
