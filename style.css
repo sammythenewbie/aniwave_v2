@@ -275,6 +275,7 @@ section {
 
 .search input:focus{
   box-shadow: none;
+  background-color: transparent;
 }
 
 .search .fa-search{
