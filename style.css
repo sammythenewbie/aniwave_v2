@@ -603,6 +603,11 @@ section {
     gap: 10px;
   }
 
+  .username {
+    color: var(--logo-color-blue);
+    font-size: 1.2rem;
+  }
+
   .action-wrap {
     display: flex;
     gap:10px;
