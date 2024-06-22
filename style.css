@@ -616,7 +616,7 @@ section {
 
   .write > input[type=text] {
     padding: 10px;
-    width: auto;
+    width: 100%;
     background: white;
     border-radius: 10px;
     border: 0;
