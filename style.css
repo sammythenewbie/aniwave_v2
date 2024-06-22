@@ -592,7 +592,15 @@ section {
     line-height: 1.6rem;
   }
 
-  .share, .comments-wrap {
+  .share {
+    padding: 12px 10px;
+    border-radius: 10px;
+    display: flex;
+    gap: 1rem;
+    background: rgb(255, 255, 255,0.2)
+  }
+
+  .comments-wrap {
     padding: 12px 10px;
     border-radius: 10px;
     display: flex;
