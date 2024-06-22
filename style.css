@@ -604,7 +604,8 @@ section {
   }
 
   .username {
-    color: var(--logo-color-blue);
+    -webkit-text-stroke: 1px;
+    -webkit-text-stroke-color: var(--logo-color-blue);
     font-size: 1.2rem;
   }
 
