@@ -108,8 +108,8 @@
         <div class="offcanvas-body">
           <div style="display:flex; justify-content:space-between; flex-direction:column; height:100%;">
           <div>
-              <div id="user-info" style="display: none;">
-            <img id="profile-pic" src="" alt="Profile Picture" width="50">
+              <div id="user-info" style="display: none; gap:10px;">
+            <img id="profile-pic" src="" alt="Profile Picture" width="50" style="border-radius:50%;">
             <p id="user-name"></p>
             </div>
             <ul style="display:flex;">
@@ -187,8 +187,8 @@ onAuthStateChanged(auth, (user) => {
     window.location.href = "login.html"; 
   }
   if (user) {
-            document.getElementById("user-info").style.display = "block";
-            document.getElementById("user-name").innerText = user.displayName;
+            document.getElementById("user-info").style.display = "flex";
+            document.getElementById("user-name").innerText = <i class="fa-solid fa-circle-check" style="color: dodgerblue;"></i> + user.displayName;
             document.getElementById("profile-pic").src = user.photoURL;
         } else {
             document.getElementById("user-info").style.display = "none";
