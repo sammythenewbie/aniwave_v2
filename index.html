@@ -180,6 +180,18 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 });
 
+import { onAuthStateChanged } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-auth.js";
+
+        onAuthStateChanged(auth, (user) => {
+            if (user) {
+                document.getElementById("user-info").style.display = "block";
+                document.getElementById("user-name").innerText = user.displayName;
+                document.getElementById("profile-pic").src = user.photoURL;
+            } else {
+                document.getElementById("user-info").style.display = "none";
+            }
+        });
+        
 // 🔹 Redirect users if not logged in
 onAuthStateChanged(auth, (user) => {
   if (!user) {
