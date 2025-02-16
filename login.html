@@ -121,7 +121,6 @@
             Toastify({ text: `Welcome, ${user.displayName}!`, backgroundColor: "green", duration: 3000 }).showToast();
         })
         .catch((error) => {
-            console.error("Error signing in:", error.message, "Error Code:", error.code);
             Toastify({ text: "Login failed! " + error.message, backgroundColor: "red", duration: 3000 }).showToast();
         });
 };
