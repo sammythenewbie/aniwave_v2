@@ -99,6 +99,10 @@
     Toastify({ text: "Passwords do not match!", backgroundColor: "red", duration: 3000 }).showToast();
     return;
   }
+  if (!checkbox.checked) {
+    Toastify({ text: "You must agree to the T&C!", backgroundColor: "red", duration: 3000 }).showToast();
+    return;
+  }
       
           createUserWithEmailAndPassword(auth, email, password)
             .then((userCredential) => {
