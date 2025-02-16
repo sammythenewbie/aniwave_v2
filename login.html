@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/7756979872.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <title>AniWave-Log In</title>
+</head>
+<body>
+    <div class="body">
+        <div class="bg-side">
+            <img src="bg-side.jpg" alt="">
+        </div>
+        <div class="wrapper-outer">
+            <div class="wrapper">
+                <div class="heading">
+                    <div class="heading-text">
+                        <h1>Log In</h1>
+                        <p>Join our growing community.</p>
+                    </div>
+                    <div class="heading-logo">
+                        <img src="final.png" alt="">
+                    </div>
+                </div>
+                <div class="form">
+                    <label for="email"><i class="fa-solid fa-user"></i> Username</label>
+                    <input type="email" name="email" id="email" required> 
+                    <label for="password"><i class="fa-solid fa-lock"></i> Password</label>
+                    <input type="password" name="password" id="password" required>
+                    <label id="checkbox">
+                        <input type="checkbox" id="agree" required> Agree to our <a>Terms of Service</a> & <a>Privacy Policy</a>
+                    </label>
+                    <button onclick="login()">
+                        <i class="fa-solid fa-arrow-right-to-bracket"></i>
+                        <span>Log In</span>
+                    </button>
+                </div>
+                <div class="new">New to this site? <a href="register.html">Register now.</a></div>
+            </div>
+        </div>
+    </div>
+
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
+        import { getAuth, setPersistence, signInWithEmailAndPassword, browserLocalPersistence } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-auth.js";
+        import { getDatabase } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-database.js";
+        
+        const firebaseConfig = {
+            apiKey: "AIzaSyCbo6pAKiGPKZG9U7HI78OBoxfMkVUXOWU",
+            authDomain: "aniwave-login.firebaseapp.com",
+            projectId: "aniwave-login",
+            storageBucket: "aniwave-login.firebasestorage.app",
+            messagingSenderId: "904746829367",
+            appId: "1:904746829367:web:0b68238281b1fa0684e1b2",
+            measurementId: "G-XD60ZQJ6K3"
+        };
+        
+        const app = initializeApp(firebaseConfig);
+        const auth = getAuth();
+        const db = getDatabase(app);
+        
+        window.login = function() {
+            let email = document.getElementById("email").value;
+            let password = document.getElementById("password").value;
+            
+            setPersistence(auth, browserLocalPersistence).then(() => {
+                return signInWithEmailAndPassword(auth, email, password);
+            }).then((userCredential) => {
+                Toastify({
+                    text: "Signing you in...",
+                    duration: 2000,
+                    gravity: "top",
+                    position: "center",
+                    backgroundColor: "green",
+                }).showToast();
+
+                setTimeout(() => {
+                    window.location.href = "index.html";
+                }, 2000);
+            }).catch((error) => {
+                let errorMessage = getFirebaseErrorMessage(error.code);
+                Toastify({ text: errorMessage, backgroundColor: "red", duration: 3000 }).showToast();
+            });
+        };
+        
+        function getFirebaseErrorMessage(errorCode) {
+            switch (errorCode) {
+                case "auth/invalid-email": return "Invalid email format!";
+                case "auth/user-not-found": return "No account found with this email! Register instead.";
+                case "auth/wrong-password": return "Incorrect password!";
+                case "auth/too-many-requests": return "Too many failed attempts! Try again later.";
+                case "auth/network-request-failed": return "Network error! Check your internet connection.";
+                default: return "Login failed! Please try again.";
+            }
+        }
+    </script>
+</body>
+</html>
