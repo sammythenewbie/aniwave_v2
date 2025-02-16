@@ -10,7 +10,7 @@
     <script src="https://kit.fontawesome.com/7756979872.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
     <script src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
-    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+     <script src="https://www.google.com/recaptcha/api.js"></script>
     <title>AniWave-Log In</title>
 </head>
 <body>
@@ -29,7 +29,7 @@
                         <img src="final.png" alt="">
                     </div>
                 </div>
-                <div class="form">
+                <div class="form" id="form">
                     <label for="email"><i class="fa-solid fa-user"></i> Username</label>
                     <input type="email" name="email" id="email" required> 
                     <label for="password"><i class="fa-solid fa-lock"></i> Password</label>
@@ -38,7 +38,10 @@
                         <input type="checkbox" name="agree" id="agree"> <span>Agree to our <a>Terms of Service</a> & <a>Privacy Policy</a></span>
                     </label>
                     <div class="g-recaptcha" data-sitekey="6LeSptgqAAAAAApFo9RFxI5S16QbKmuaXnDVpJOr"></div>
-                    <button onclick="login()">
+                    <button onclick="login()" class="g-recaptcha" id="login"
+        data-sitekey="6LeSptgqAAAAAApFo9RFxI5S16QbKmuaXnDVpJOr" 
+        data-callback='onSubmit' 
+        data-action='submit'>
                         <i class="fa-solid fa-arrow-right-to-bracket"></i>
                         <span>Log In</span>
                     </button>
@@ -51,6 +54,11 @@
         </div>
     </div>
 
+     <script>
+   function onSubmit(token) {
+     document.getElementById("form").submit();
+   }
+ </script>
     <script type="module">
         import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
         import { getAuth, setPersistence, signInWithEmailAndPassword, browserLocalPersistence } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-auth.js";
