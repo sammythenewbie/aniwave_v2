@@ -188,7 +188,7 @@ onAuthStateChanged(auth, (user) => {
   }
   if (user) {
             document.getElementById("user-info").style.display = "flex";
-            document.getElementById("user-name").innerText = '<i class="fa-solid fa-circle-check" style="color: dodgerblue;"></i> user.displayName';
+            document.getElementById("user-name").innerHTML = '<i class="fa-solid fa-circle-check" style="color: dodgerblue;"></i> user.displayName';
             document.getElementById("profile-pic").src = user.photoURL;
         } else {
             document.getElementById("user-info").style.display = "none";
