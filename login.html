@@ -50,6 +50,7 @@
         import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
         import { getAuth, setPersistence, signInWithEmailAndPassword, browserLocalPersistence } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-auth.js";
         import { getDatabase } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-database.js";
+        import { signInWithPopup, GoogleAuthProvider } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-auth.js";
         
         const firebaseConfig = {
             apiKey: "AIzaSyCbo6pAKiGPKZG9U7HI78OBoxfMkVUXOWU",
@@ -98,6 +99,41 @@
                 Toastify({ text: errorMessage, backgroundColor: "red", duration: 3000 }).showToast();
             });
         };
+
+        window.googleLogin = function () {
+    const provider = new GoogleAuthProvider();
+
+    signInWithPopup(auth, provider)
+        .then((result) => {
+            const user = result.user;
+            console.log("User successfully logged in:", user);
+            console.log("User Name:", user.displayName);
+            console.log("User Email:", user.email);
+            console.log("Profile Picture:", user.photoURL);
+
+            document.getElementById("user-info").style.display = "block";
+            document.getElementById("user-name").innerText = user.displayName;
+            document.getElementById("profile-pic").src = user.photoURL;
+
+            Toastify({ text: `Welcome, ${user.displayName}!`, backgroundColor: "green", duration: 3000 }).showToast();
+        })
+        .catch((error) => {
+            console.error("Error signing in:", error.message, "Error Code:", error.code);
+            Toastify({ text: "Login failed! " + error.message, backgroundColor: "red", duration: 3000 }).showToast();
+        });
+};
+
+        import { onAuthStateChanged } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-auth.js";
+
+        onAuthStateChanged(auth, (user) => {
+            if (user) {
+                document.getElementById("user-info").style.display = "block";
+                document.getElementById("user-name").innerText = user.displayName;
+                document.getElementById("profile-pic").src = user.photoURL;
+            } else {
+                document.getElementById("user-info").style.display = "none";
+            }
+        });
         
         function getFirebaseErrorMessage(errorCode) {
             switch (errorCode) {
