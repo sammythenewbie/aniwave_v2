@@ -41,7 +41,8 @@
                         <input type="text" class="form-control" placeholder="Find Your Favorite Anime...">
                         <button class="btn" style="background-color: var(--logo-color-orange);">Search</button>
                         <button class="btn" style="background-color: var(--logo-color-blue);" id="btn-cog" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
-                            <i class="fa-solid fa-user-gear"></i>
+                           
+                            <img src="" id="mini-pfp">
                         </button>
                     </div>
                 </div>
@@ -190,8 +191,11 @@ onAuthStateChanged(auth, (user) => {
             document.getElementById("user-info").style.display = "flex";
             document.getElementById("user-name").innerHTML = '<i class="fa-solid fa-circle-check" style="color: dodgerblue;"></i>' + " " + user.displayName;
             document.getElementById("profile-pic").src = user.photoURL;
+            document.getElementById("mini-pfp").src = user.photoURL;
         } else {
             document.getElementById("user-info").style.display = "none";
+            document.getElementById("mini-pfp").style.display = "none";
+            document.getElementById("btn-cog").innerHTML = '<i class="fa-solid fa-user-gear"></i>';
         }
 });
 
