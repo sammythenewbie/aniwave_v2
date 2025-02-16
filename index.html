@@ -145,7 +145,8 @@
         const auth = getAuth(app);
         const analytics = getAnalytics(app);
 
-        document.getElementById("logoutBtn").addEventListener("click", function() {
+        const logout = document.getElementById("logoutBtn");
+        logout.addEventListener("click", function() {
         auth.signOut(auth)
             .then(() => {
             Toastify({
