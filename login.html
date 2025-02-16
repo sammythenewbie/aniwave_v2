@@ -108,17 +108,17 @@
 
     signInWithPopup(auth, provider)
         .then((result) => {
-            const user = result.user;
-            console.log("User successfully logged in:", user);
-            console.log("User Name:", user.displayName);
-            console.log("User Email:", user.email);
-            console.log("Profile Picture:", user.photoURL);
+            Toastify({
+                    text: "☺️ Signing you in...",
+                    duration: 2000,
+                    gravity: "top",
+                    position: "center",
+                    backgroundColor: "green",
+                }).showToast();
 
-            document.getElementById("user-info").style.display = "block";
-            document.getElementById("user-name").innerText = user.displayName;
-            document.getElementById("profile-pic").src = user.photoURL;
-
-            Toastify({ text: `Welcome, ${user.displayName}!`, backgroundColor: "green", duration: 3000 }).showToast();
+                setTimeout(() => {
+                    window.location.href = "index.html";
+                }, 2000);
         })
         .catch((error) => {
             Toastify({ text: "Login failed! " + error.message, backgroundColor: "red", duration: 3000 }).showToast();
