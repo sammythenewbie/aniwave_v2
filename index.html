@@ -194,8 +194,6 @@ onAuthStateChanged(auth, (user) => {
             document.getElementById("profile-pic").src = user.photoURL;
             document.getElementById("mini-pfp").src = user.photoURL;
         } else {
-            document.getElementById("user-info").style.display = "none";
-            document.getElementById("mini-pfp").style.display = "none";
             document.getElementById("btn-cog").innerHTML = '<i class="fa-solid fa-user-gear"></i>';
         }
 });
